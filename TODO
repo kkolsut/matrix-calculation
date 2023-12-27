@@ -1,0 +1,15 @@
+Rzeczy do zrobienia w najblizszym czasie:
+	- znajdowanie wartosci wlasnych macierzy
+	- znajdowanie wektorow wlasnych macierzy
+	- wzbogaciac dokumentacje o zastosowanych algorytmach
+	- ewentualna optymalizacja algorytmow
+	- wieksze zmodularyzowanie programu - funkcja "main" rozrosla sie
+	  niepokojaco... (chodzi o funkcje obslugi porametrow wywolania,
+	  funkcje ralizujace poszczegolne czesci w instrukcji "swich"). 
+	  Uczyni to kod bardziej czytelnym i prawdopodobnie krotszym.
+
+	
+Jesli ktos ma jeszcze jakies pomysly to prosze o kontakt:
+	Krzysztof Kolsut
+	kolsut@antares.astrouw.edu.pl
+

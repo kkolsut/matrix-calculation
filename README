@@ -1,0 +1,57 @@
+autor:	Krzysztof Kolsut
+	kolsut@antares.astrouw.edu.pl
+
+Program, w zaleznosci od parametrow, wykonuje operacje na macierzach. 
+Dostepne opcje mozna uzyskac po wywolaniu:
+./macierz --help (lub -h)
+
+Jako argumenty przyjmuje opcje okreslajaca operacje oraz  pliki, 
+ktore zawieraja macierze (w zaleznosci od opcji jedna albo dwie).
+
+Format macierzy w pliku MUSI byc nastepujacy:
+
+a11	 a12	  a13	...    a1n
+a21	 a22	  a23	...    a2n
+.
+.
+.
+am1	 am2	  am3	...    amn
+
+!!!(odstepy miedzy kolumnami MUSZA byc tabulacjami ('\t')!!!
+
+W przypadku wektora (dla rozwiazywania ukladu rownan):
+b1
+b2
+.
+.
+.
+bn
+
+
+jako wynik programu zostaje wypisana na ekran macierz koncowa lub wektor,
+aby zapisac ja do pliku wystarczy przekierowac standardowe wyjscie do pliku
+(pomyslalem ze czasmi nie trzeba jej zapisywac do pliku wiec jest to 
+latwy sposob na zrobienie tego):
+
+./macierz <opcje> [<plik1>] [<plik2>] > plik_z_wynikiem
+
+W przypadku bledow w czasie dzialania (chodzi glownie o naruszenie ochrony
+pamieci) nalezy sprawdzic czy za ostatnia kolumna w pliku nie ma zbednych
+tabulacji lub nie ma pustych linii na koncu pliku. W takim przypadku program 
+probuje czytac lub pisac po niedozwolonych obszarach pamieci!!!
+
+Kompilacja przebiega przy pomocy komendy "make" w wyniku ktorej zostanie 
+utworzony plik macierz - gotowy do uzycia program. Nastepnie poleceniem 
+"make clean" kasujemy pozostalosci po kompliacji (pliki *.o).
+
+Podczas kompilacji domyslnie jest uzywany kompilator gcc. 
+Ady uzyc innego nalezy w pliku Makefile zmienic linijke 
+CC=gcc na CC="twoj kompilator".
+
+Program jest napisany w jezyku C z pewnymi wyjatkami: 
+-	uzywana jest dynamiczna alokacje pamieci zapozyczona z C++
+-	komentarze takze zapozyczone z C++
+
+W przypadku problemow przy kompilacji mozna sprobowac uzyc innego kompilator
+(kompatybilnego z C++), poniewaz niektore (o ile nie wiekszosc:)) kompilatorow
+C nie akceptuje zozszerzen zaczerpnietych z C++.
