@@ -1,6 +1,3 @@
-autor:	Krzysztof Kolsut
-	kolsut@antares.astrouw.edu.pl
-
 Program, w zaleznosci od parametrow, wykonuje operacje na macierzach. 
 Dostepne opcje mozna uzyskac po wywolaniu:
 ./macierz --help (lub -h)
